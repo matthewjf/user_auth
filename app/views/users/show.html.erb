@@ -1,0 +1,11 @@
+<h1>Your account</h1>
+username: <%= @user.user_name %>
+<br>
+
+<ul>
+  <% @user.cats.each do |cat| %>
+    <li><%= link_to cat.name, cat_url(cat) %></li>
+  <% end %>
+</ul>
+
+<!-- show cat rental requests -->
